@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acorn Clicker</title>
     <link rel="stylesheet" href="../../style.css">
 </head>
+
 <body>
-    <a id="linkButton" href="../../index.html">back</a>
+    <a id="linkButton" href="../../index.html">home</a>
     <p style="font-size: xx-large;">Acorn Clicker</p>
     <p>Click the tree to harvest an acorn!</p>
-    <button onclick="addAcorn()" style="background-color: transparent; border-color: transparent;"><img src="tree.png" style="height: 20vh; background-color: transparent;"></button>
+    <button onclick="addAcorn()" style="background-color: transparent; border-color: transparent;"><img src="tree.png"
+            style="height: 20vh; background-color: transparent;"></button>
     <p id="acornDisplay">You have no acorns.</p>
-    <button>upgrade </button>
+    <button onclick="upgrade()">upgrade </button>
     <script src="acornClickScript.js"></script>
 </body>
+
 </html>

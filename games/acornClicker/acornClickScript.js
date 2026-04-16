@@ -1,5 +1,9 @@
-        let acorns = 0;
-        function addAcorn() {
-            acorns += 1;
-            document.getElementById("acornDisplay").innerText = `You have ${acorns} acorns.`
-        }
+let acorns = 0;
+let acornsPerClick = 1;
+function addAcorn() {
+    acorns += acornsPerClick;
+    document.getElementById("acornDisplay").innerText = `You have ${acorns} acorns.`
+}
+function upgrade() {
+    acornsPerClick *= Math.ceil(Math.random())*10
+}
