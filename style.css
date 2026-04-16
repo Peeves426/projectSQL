@@ -3,3 +3,9 @@ body {
     background-color: black;
     color: white;
 }
+#linkButton {
+    background-color: white;
+    text-decoration: none;
+    padding: 1vh;
+    border-radius: 10px;
+}
