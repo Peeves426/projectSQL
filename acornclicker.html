@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acorn Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p style="font-size: xx-large;">Acorn Clicker</p>
+    <p>Click the tree to harvest an acorn!</p>
+    <button onclick="addAcorn()" style="background-color: transparent; border-color: transparent;"><img src="tree.png" style="height: 20vh; background-color: transparent;"></button>
+    <p id="acornDisplay">You have no acorns.</p>
+    <button>upgrade </button>
+    <script>
+        let acorns = 0;
+        function addAcorn() {
+            acorns += 1;
+            document.getElementById("acornDisplay").innerText = `You have ${acorns} acorns.`
+        }
+    </script>
+</body>
+</html>
