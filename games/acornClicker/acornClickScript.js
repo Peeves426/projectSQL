@@ -1,4 +1,4 @@
-let acorns = 601;
+let acorns = 0;
 let acornsPerClick = 1;
 let upgradeCost = 50;
 let autoclickCost = 600;
