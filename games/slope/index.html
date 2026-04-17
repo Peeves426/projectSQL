@@ -1,9 +1,11 @@
 <html lang="en">
+
 <head>
     <title>Play Slope Game Online!</title>
     <meta charset="utf-8" />
     <meta name="robots" content="noindex, nofollow, noodp, noydir" />
-    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui" />
+    <meta name="viewport"
+        content="width=device-width, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui" />
     <meta http-equiv="X-UA-Compatible" content="requiresActiveX=true,IE=Edge,chrome=1" />
     <meta http-equiv="Content-Language" content="en-US" />
     <style>
@@ -236,9 +238,19 @@
             box-shadow: 2px 3px 1px 0 rgba(0, 0, 0, .1);
             opacity: .95;
         }
+
+        #linkButton {
+            background-color: rgb(135, 155, 139);
+            color: rgb(94, 67, 18);
+            text-decoration: none;
+            padding: 1vh;
+            border-radius: 10px;
+        }
     </style>
 </head>
+
 <body>
+    <a id="linkButton" href="../../index.html">home</a>
     <div class="before-playing" id="preloading-game">
         <div class="blur-background"></div>
         <div class="preload-before-playing">
@@ -249,16 +261,22 @@
                 <button onclick="start_game_frame()" aria-label="Play game">
                     Play Now
                     <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" width="24" height="24">
-                        <path d="M10 15.0657V8.93426C10 8.53491 10.4451 8.29671 10.7773 8.51823L15.376 11.584C15.6728 11.7819 15.6728 12.2181 15.376 12.416L10.7774 15.4818C10.4451 15.7033 10 15.4651 10 15.0657Z"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 15.0657V8.93426C9.5 8.13556 10.3901 7.65917 11.0547 8.10221L15.6533 11.1679C16.247 11.5638 16.247 12.4362 15.6533 12.8321L11.0547 15.8978C10.3901 16.3408 9.5 15.8644 9.5 15.0657ZM10 8.93426V15.0657C10 15.4651 10.4451 15.7033 10.7774 15.4818L15.376 12.416C15.6728 12.2181 15.6728 12.2181 15.376 11.584L10.7773 8.51823C10.4451 8.29671 10 8.53491 10 8.93426Z"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path>
+                        <path
+                            d="M10 15.0657V8.93426C10 8.53491 10.4451 8.29671 10.7773 8.51823L15.376 11.584C15.6728 11.7819 15.6728 12.2181 15.376 12.416L10.7774 15.4818C10.4451 15.7033 10 15.4651 10 15.0657Z">
+                        </path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.5 15.0657V8.93426C9.5 8.13556 10.3901 7.65917 11.0547 8.10221L15.6533 11.1679C16.247 11.5638 16.247 12.4362 15.6533 12.8321L11.0547 15.8978C10.3901 16.3408 9.5 15.8644 9.5 15.0657ZM10 8.93426V15.0657C10 15.4651 10.4451 15.7033 10.7774 15.4818L15.376 12.416C15.6728 12.2181 15.6728 12.2181 15.376 11.584L10.7773 8.51823C10.4451 8.29671 10 8.53491 10 8.93426Z">
+                        </path>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z">
+                        </path>
                     </svg>
                 </button>
             </div>
         </div>
     </div>
     <script>
-        document.addEventListener("click", function() {
+        document.addEventListener("click", function () {
             if (window.parent) {
                 window.parent.postMessage("iframeClick", "*");
             }
@@ -278,13 +296,13 @@
             frame_game.setAttribute('allowfullscreen', 'true');
             frame_game.setAttribute('src', 'https://azgames.io/game/slope/');
             frame_game.setAttribute('allow', 'autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad; keyboard-map *; xr-spatial-tracking; clipboard-write; web-share; accelerometer; magnetometer; gyroscope; display-capture');
-            
+
             if (document.getElementById("preloading-game")) {
                 await document.getElementById("preloading-game").remove();
             }
             document.body.append(frame_game);
             frame_game.focus();
-            
+
             try {
                 const azStorage = new GMStorage();
                 let obj = {
@@ -299,4 +317,5 @@
         }
     </script>
 </body>
+
 </html>
