@@ -1,12 +1,12 @@
 body {
     font-family: sans-serif;
     background-color: rgb(49, 147, 62);
-    color: rgb(94, 67, 18);
+    color: rgb(0, 0, 0);
 }
 
 button {
-       background-color: rgb(135, 155, 139);
-    color: rgb(94, 67, 18);
+       background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 1vh;
     border-radius: 10px; 
@@ -15,8 +15,8 @@ button {
 }
 
 #linkButton {
-    background-color: rgb(135, 155, 139);
-    color: rgb(94, 67, 18);
+    background-color: rgb(145, 145, 145);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 1vh;
     border-radius: 10px;
