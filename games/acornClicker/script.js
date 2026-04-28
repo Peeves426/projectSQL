@@ -1,5 +1,5 @@
 let acorns = 0;
-let money = 1000;
+let money = 0;
 let moneyPerAcorn = 1;
 let trees = 1;
 let treeCost = 50;
