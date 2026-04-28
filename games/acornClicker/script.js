@@ -1,9 +1,11 @@
 let acorns = 0;
-let money = 0;
-let acornsPerClick = 1;
+let money = 1000;
 let moneyPerAcorn = 1;
 let trees = 1;
 let treeCost = 50;
+let feralizerCost = 100;
+let farmerCost = 500;
+let farmerSpeed = 10000
 let isSelling = false;
 
 function updateAcorns() {
@@ -14,7 +16,7 @@ function updateMoney() {
 }
 function addAcorn() {
     if(isSelling == false){
-        acorns += acornsPerClick;
+        acorns += trees;
         updateAcorns();
     }
 };
@@ -32,7 +34,6 @@ let sellInterval;
 function sellAcorns() {
     if(isSelling == false) {
         isSelling = true;
-        console.log("hello world");
         sellInterval = window.setInterval(sellOneAcorn, 1000);
      }
 };
@@ -40,3 +41,33 @@ function stopSelling() {
     isSelling = false;
     clearInterval(sellInterval);
 };
+function addTree() {
+    if(money >= treeCost) {
+        trees += 1;
+        money -= treeCost;
+        updateMoney();
+        treeCost = Math.ceil(Math.random() * 10) * treeCost;
+        document.getElementById("treeButton").innerHTML = `Buy tree $${treeCost}`;
+    };
+};
+function buyFertalizer() {
+    if(money >= feralizerCost) {
+        moneyPerAcorn += 5; 
+        money -= feralizerCost;
+        updateMoney();
+        feralizerCost = Math.ceil(Math.random() * 10) * feralizerCost;
+        document.getElementById("fertalizerButton").innerHTML = `Buy Fertalizer $${feralizerCost}`;
+        
+    }
+}
+let farmInterval
+function hireFarmer() {
+    if(money >= farmerCost) {
+        farmerSpeed /= 2
+        farmInterval = window.setInterval(addAcorn, farmerSpeed)
+        money -= farmerCost;
+        updateMoney();
+        document.getElementById("farmerButton").innerHTML = `give farmer a raise $${farmerCost}`;
+        
+    }
+}
