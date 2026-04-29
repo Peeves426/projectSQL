@@ -1,11 +1,13 @@
 let acorns = 0;
-let money = 0;
+let money = 10000000;
 let moneyPerAcorn = 1;
 let trees = 1;
 let treeCost = 50;
 let feralizerCost = 100;
 let farmerCost = 500;
-let farmerSpeed = 10000
+let farmerSpeed = 10000;
+let cashierSpeed = 10000;
+let cashierCost = 500;
 let isSelling = false;
 
 function updateAcorns() {
@@ -67,7 +69,18 @@ function hireFarmer() {
         farmInterval = window.setInterval(addAcorn, farmerSpeed)
         money -= farmerCost;
         updateMoney();
-        document.getElementById("farmerButton").innerHTML = `give farmer a raise $${farmerCost}`;
+        document.getElementById("farmerButton").innerHTML = `Give farmer a raise $${farmerCost}`;
+        
+    }
+}
+let cashierInterval
+function hireCashier() {
+    if(money >= cashierCost) {
+        cashierSpeed /= 2
+        cashierInterval = window.setInterval(sellOneAcorn(), cashierSpeed)
+        money -= cashierCost;
+        updateMoney();
+        document.getElementById("cashierButton").innerHTML = `Give cashier a raise $${cashierCost}`;
         
     }
 }
