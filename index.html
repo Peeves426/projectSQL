@@ -4,14 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Squirrel Gang</title>
+    <title>Squirrel Web</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <p style="font-size: xx-large;">This is the SQUIRREL Gang website!</p>
-    <a id="linkButton" href="menuItems/gamePage.html">games</a>
-    <a id="linkButton" href="menuItems/toolPage.html">tools</a>
+
+    <nav class="topbar">
+        <div class="topbar-brand">Squirrel Web</div>
+        <div class="topbar-links">
+            <a href="menuItems/gamePage.html"><button>Games</button></a>
+            <a href="menuItems/toolPage.html"><button>Tools</button></a>
+        </div>
+    </nav>
+    <div class="hero">
+        <h1 class="hero-title">Welcome to<br><span>Squirrel Web</span></h1>
+        <p class="hero-sub">A cozy corner of the forest, just for us.</p>
+    </div>
+
     <script src="script.js"></script>
 </body>
 

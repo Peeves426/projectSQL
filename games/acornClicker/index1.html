@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acorn Clicker</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+    <p></p>
+    <h1>Acorn Clicker</h1>
+    <p>Click the tree to harvest an acorn!</p>
+    <button onclick="addAcorn()" style="background-color: transparent; border-color: transparent;"><img src="tree.png"
+            style="height: 20vh; background-color: transparent;"></button>
+    <p id="acornDisplay">You have no acorns.</p>
+    <button onclick="sellAcorns()">Sell Acorns</button> <a>(While acorns are selling, you may not harvest more.)</a>
+    <p id="moneyDisplay">you have $0</p>
+    <button popovertarget="upgradeMenu">Upgrades</button>
+    <div id="upgradeMenu" popover>
+        <h3>Tree Upgrades</h3>
+        <button id="treeButton" onclick="addTree()">Buy Tree $50</button> <a>More acorns per click.</a>
+        <p></p>
+        <button id="fertalizerButton" onclick="buyFertalizer()">Buy Fertalizer $100</button> <a>More money per acorn.</a>
+        <h3>Automation</h3>
+        <button id="farmerButton" onclick="hireFarmer()">Hire Farmer $500</button> <a>Automaticly collects acorns.</a>
+        <p></p>
+        <button id="cashierButton" onclick="hireCashier()">Hire Cashier $500</button> <a>Automaticly sells acorns.</a>
+        <h3>speed</h3>
+        <button>Adveritse Shop</button> <a>Sells acorns faster.</a>
+        <p></p>
+        <button></button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
