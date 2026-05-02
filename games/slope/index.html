@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Squirrel Web</title>
-    <meta name="description" content="Play Eaglercraft 1.8 Minecraft in your browser. No install needed." />
-    <meta name="keywords" content="Minecraft, Eaglercraft, browser game, unblocked, Reid" />
+    <meta name="description" content="Squirrel Website" />
+    <meta name="keywords" content="Squirrel Gang" />
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-    <p></p>
-    <a id="linkButton" href="../../index.html"><button>Home</button></a>
-    <p></p>
+    <nav class="topbar">
+        <div class="topbar-brand">Squirrel Gang</div>
+        <div class="topbar-links">
+            <a href="../../"><button>Home</button></a>
+            <a href="../"><button>Games</button></a>
+            <a href="../../tools/"><button>Tools</button></a>
+        </div>
+    </nav>
     <main class="hero">
         <div class="iframe-container">
             <iframe
@@ -22,7 +27,7 @@
                 scrolling="no"
                 allow="fullscreen; keyboard"
                 allowfullscreen
-                title="Eaglercraft Game"
+                title="Game"
             ></iframe>
         </div>
         <div class="buttons">
@@ -32,9 +37,7 @@
     <script>
         const iframe = document.getElementById('gameFrame');
         function toggleFullScreen() {
-            // Try to focus first
             iframe.contentWindow.focus();
-
             if (iframe.requestFullscreen) {
                 iframe.requestFullscreen();
             } else if (iframe.mozRequestFullScreen) {
@@ -50,8 +53,6 @@
                 iframe.contentWindow.focus();
             }, 500);
         }
-
-        // Always focus iframe when clicked
         iframe.addEventListener('click', () => {
             iframe.contentWindow.focus();
         });

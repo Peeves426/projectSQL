@@ -105,7 +105,6 @@ body {
     color: var(--bark);
     line-height: 1.15;
     text-shadow: 0 2px 8px rgba(255,255,255,0.6);
-    animation: fadeUp 0.9s ease both;
 }
 
 .hero-title span {
@@ -118,13 +117,7 @@ body {
     margin-top: 1.2rem;
     font-size: 1.15rem;
     color: var(--fern);
-    opacity: 0;
-    animation: fadeUp 0.9s 0.35s ease forwards;
-}
-
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
+    opacity: 1;
 }
 
 /* ── Utility: upgradeMenu (kept from original) ── */
@@ -153,4 +146,31 @@ button {
 
 button:hover {
     background-color: var(--gold);
+}
+
+.selectedButton {
+    background-color: var(--moss);
+    color: var(--cream);
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: ubuntu;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.15s;
+    margin: 1vh;
+}
+.selectedButton:hover {
+    background-color: var(--moss);
+    color: var(--cream);
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: ubuntu;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.15s;
+    margin: 1vh;
 }
