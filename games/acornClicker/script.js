@@ -1,5 +1,5 @@
 let acorns = 0;
-let money = 1;
+let money = 50000;
 let moneyPerAcorn = 1;
 let trees = 1;
 let treeCost = 50;
@@ -9,6 +9,8 @@ let farmerSpeed = 10000;
 let cashierSpeed = 10000;
 let cashierCost = 500;
 let isSelling = false;
+let advertCost = 100;
+let bundleCost = 20;
 
 function updateAcorns() {
     document.getElementById("acornDisplay").innerText = `You have ${acorns} acorns.`;
@@ -40,8 +42,10 @@ function sellAcorns() {
      }
 };
 function stopSelling() {
-    isSelling = false;
-    clearInterval(sellInterval);
+    if(isSelling == true) {
+        isSelling = false;
+        clearInterval(sellInterval);
+    }
 };
 function addTree() {
     if(money >= treeCost) {

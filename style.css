@@ -51,7 +51,6 @@ body {
     gap: 0.75rem;
 }
 
-/* ── Nav Buttons ──────────────────────────── */
 .linkButton {
     display: inline-flex;
     align-items: center;
@@ -79,7 +78,7 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* ── Hero Section ─────────────────────────── */
+
 .hero {
     position: relative;
     display: flex;
@@ -97,8 +96,6 @@ body {
         radial-gradient(ellipse at 50% 50%, rgba(212, 168, 67, 0.07) 0%, transparent 70%);
 }
 
-
-/* Hero text */
 .hero-title {
     font-family: ubuntu;
     font-size: clamp(2.4rem, 6vw, 4.5rem);
@@ -120,16 +117,16 @@ body {
     opacity: 1;
 }
 
-/* ── Utility: upgradeMenu (kept from original) ── */
 #upgradeMenu {
-    background-color: var(--fern);
+    background-color: var(--cream);
     border-radius: 12px;
     padding: 3vh;
     color: var(--cream);
     box-shadow: 0 4px 14px var(--shadow);
+    color: var(--bark);
 }
 
-/* ── General buttons ──────────────────────── */
+
 button {
     background-color: var(--acorn);
     color: var(--cream);
